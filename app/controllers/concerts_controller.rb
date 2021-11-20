@@ -8,6 +8,7 @@ class ConcertsController < ApplicationController
 
   # GET /concerts/1 or /concerts/1.json
   def show
+    @bands = Band.all
   end
 
   # GET /concerts/new
@@ -64,6 +65,6 @@ class ConcertsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def concert_params
-      params.require(:concert).permit(:datetime, :duration, :assitants)
+      params.require(:concert).permit(:datetime, :duration, :assitants, :band_id)
     end
 end

@@ -26,6 +26,10 @@
     <%= form.number_field :assitants %>
   </div>
 
+  <div class="select">
+    <%= form.collection_select(:band_id, Band.all, :id, :name) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
