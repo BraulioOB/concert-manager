@@ -1,5 +1,7 @@
 class Band < ApplicationRecord
     has_many :concerts, -> { order(datetime: :desc) }, dependent: :destroy
+    validates :name, presence: true, uniqueness: { case_sensitive: false }
+    validates :debut, :crew, presence: true
 
     def last_concert_in_words(date)
         month = {

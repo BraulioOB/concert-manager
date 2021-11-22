@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="mb-2">
-    <span class="mr-2">Fecha</span>
+    <span class="mr-2">Fecha y hora</span>
     <%= form.datetime_field :datetime, type: "datetime-local", class: "rounded p-2 w-full" %>
   </div>
 
   <div class="mb-2">
-    <%= form.label :duration %>
+    <span>Duración:</span>
     <%= form.number_field :duration, class: "rounded p-2 w-full" %>
   </div>
 
   <div class="mb-2">
-    <%= form.label :assistants %>
+    <span>Asistentes:</span>
     <%= form.number_field :assistants, class: "rounded p-2 w-full" %>
   </div>
 

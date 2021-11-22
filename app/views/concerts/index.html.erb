@@ -11,7 +11,7 @@
   </div>
 
   <div class="space-y-2 mb-10">
-    <% @concerts.each do |concert| %>
+    <% (@concerts.order(datetime: :desc)).each do |concert| %>
     <div class="flex justify-between group bg-gray-100 rounded-lg transition-shadow	hover:shadow-inner px-5">
       <div class="mr-3 py-4 w-3/6">
         <div class="text-xl">

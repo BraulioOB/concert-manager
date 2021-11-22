@@ -33,14 +33,5 @@ ActiveRecord::Schema.define(version: 2021_11_22_193258) do
     t.index ["band_id"], name: "index_concerts_on_band_id"
   end
 
-  create_table "crews", force: :cascade do |t|
-    t.bigint "band_id", null: false
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["band_id"], name: "index_crews_on_band_id"
-  end
-
   add_foreign_key "concerts", "bands"
-  add_foreign_key "crews", "bands"
 end
