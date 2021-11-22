@@ -11,26 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :datetime %>
-    <%= form.datetime_select :datetime %>
+  <div class="mb-2">
+    <span class="mr-2">Fecha</span>
+    <%= form.datetime_field :datetime, type: "datetime-local", class: "rounded p-2 w-full" %>
   </div>
 
-  <div class="field">
+  <div class="mb-2">
     <%= form.label :duration %>
-    <%= form.number_field :duration %>
+    <%= form.number_field :duration, class: "rounded p-2 w-full" %>
   </div>
 
-  <div class="field">
-    <%= form.label :assitants %>
-    <%= form.number_field :assitants %>
+  <div class="mb-2">
+    <%= form.label :assistants %>
+    <%= form.number_field :assistants, class: "rounded p-2 w-full" %>
   </div>
 
-  <div class="select">
-    <%= form.collection_select(:band_id, Band.all, :id, :name) %>
+  <div class="mb-2">
+    <span>Banda</span>
+    <%= form.collection_select(:band_id, Band.all, :id, :name, {}, {class: "w-full p-2"}) %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="flex justify-center">
+    <%= form.submit "Guardar", class: "py-1 rounded bg-gray-300 hover:bg-green-400 text-center mt-5 w-full" %>
   </div>
 <% end %>

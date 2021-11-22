@@ -64,6 +64,6 @@ class BandsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def band_params
-      params.require(:band).permit(:name)
+      params.require(:band).permit(:name, :debut, :crew)
     end
 end
